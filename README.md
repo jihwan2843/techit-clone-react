@@ -1,1 +1,1 @@
-# Create React App with Tailwind CSS Template
+# Techit Clone Page
