@@ -83,9 +83,9 @@ const kdtCardData = [
 
 const KdtSection = () => {
   return (
-    <section className="mt-20 bg-green-100 container">
+    <section className="mt-20 container">
       <TitleBar title="KDT 테킷 스쿨" desc="K-Digital Training 부트캠프" />
-      <div className="bg-purple-100 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 justify-items-center mt-10">
+      <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 justify-items-center mt-10">
         {kdtCardData.map((v, i) => (
           <KdtCard key={i} kdtData={v} />
         ))}

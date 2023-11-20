@@ -1,6 +1,6 @@
 const KdtCard = ({ kdtData }) => {
   return (
-    <div className="bg-yellow-100 w-[290px] h-[416px]">
+    <div className=" w-[290px] h-[416px]">
       <div className="overflow-hidden rounded-lg">
         <img
           className="hover:scale-110 duration-300 rounded-lg"

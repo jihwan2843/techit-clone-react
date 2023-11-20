@@ -1,8 +1,8 @@
 import Slider from "react-slick";
 import BannerCard from "./BannerCard";
-import PrevIcon from "../icons/PrevIcon";
-import NextIcon from "../icons/NextIcon";
 import { useEffect, useRef, useState } from "react";
+import NextIcon from "../icons/NextIcon";
+import PrevIcon from "../icons/PrevIcon";
 
 const bannerData = [
   {
@@ -47,9 +47,8 @@ const Banner = () => {
     getCurrentPage();
   };
 
-  const getCurrentPage = () => {
+  const getCurrentPage = () =>
     setPage(sliderRef.current.innerSlider.state.currentSlide);
-  };
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -66,17 +65,18 @@ const Banner = () => {
           ref={sliderRef}
           arrows={false}
           autoplay={true}
-          autoplaySpeed={2000}
+          autoplaySpeed={5000}
+          fade={true}
         >
           {bannerData.map((v, i) => (
             <BannerCard key={i} title={v.title} desc={v.desc} image={v.image} />
           ))}
         </Slider>
       </ul>
-      <div className="absolute w-[1280px] left-1/2 -translate-x-1/2 bottom-6">
-        <div className="text-white bg-black w-fit bg-opacity-30 flex py-[5px] text-xs rounded-full gap-2 px-3">
+      <div className="absolute w-[1280px] px-6 left-1/2 -translate-x-1/2 bottom-6">
+        <div className="text-white bg-black w-fit bg-opacity-30 flex text-xs rounded-full gap-2 py-[5px] px-3">
           <div>
-            {page + 1}/{bannerData.length}
+            {page + 1} / {bannerData.length}
           </div>
           <button onClick={onClickPrev}>
             <PrevIcon />
